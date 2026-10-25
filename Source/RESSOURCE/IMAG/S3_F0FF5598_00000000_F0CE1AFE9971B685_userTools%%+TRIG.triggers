@@ -1,0 +1,112 @@
+// Trigger configuration for user tools
+
+#define  DesignTool            0x0255000B
+#define  SledgeTool            0x0255000C
+#define  EyedropperTool        0x02550016
+#define  DebugInfoTool         0x02550018
+#define  HandTool              0x02550019
+#define  BasementTool          0x0255001A
+#define  InteractionTool       0x0859a3ce
+
+#define  Undo                   0x02551000
+#define  Redo                   0x02551001
+#define  ToolEnable             0x02551002
+#define  ToolCancel             0x02551003
+#define  ProductDelete          0x02551004
+#define  GridToggle             0x02551005
+#define  DayNightToggle         0x02551006
+
+#define  ToggleVideoRecorder    0x02551100
+#define  TakeSnapshot           0x02551101
+#define  TopDownCamToggle       0x02551102
+
+#define  StateCtrl              0x02551010
+#define  StateShift             0x02551011
+#define  StateAlt               0x02551012
+#define  StateCtrlShift         0x02551013
+#define  StateCtrlAlt           0x02551014
+#define  StateCtrlAltShift      0x02551015
+#define  StateAltShift          0x02551016
+
+#define ActiveLotFloorUp        0x0449af12
+#define ActiveLotFloorDown      0x0449af24
+
+#define GotoLiveMode            0x02440001
+#define GotoBuildMode           0x02440002
+#define GotoBuyMode             0x02440003
+#define GotoOptionsMode         0x02440004
+#define GotoInGameStore         0x02440005
+
+#define NextWallMode            0x02430001
+#define PrevWallMode            0x02430002
+
+// Better Build custom actions
+#define BetterBuildMoveUp       0x0BBD1001
+#define BetterBuildMoveDown     0x0BBD1002
+#define BetterBuildMoveUpFine   0x0BBD1003
+#define BetterBuildMoveDownFine 0x0BBD1004
+#define BetterBuildMoveUpFree   0x0BBD1005
+#define BetterBuildMoveDownFree 0x0BBD1006
+#define BetterBuildMoveUpFreeFine   0x0BBD1007
+#define BetterBuildMoveDownFreeFine 0x0BBD1008
+#define BetterBuildScaleDown    0x0BBD1010
+#define BetterBuildScaleUp      0x0BBD1011
+
+// Tools
+e = EyedropperTool
+r = DesignTool
+h = HandTool
+alt i = DebugInfoTool
+k = SledgeTool
+i = InteractionTool
+
+b = BasementTool
+
+pagedown = ActiveLotFloorDown
+pageup = ActiveLotFloorUp
+home = NextWallMode
+end = PrevWallMode
+
+?shift f1 = GotoLiveMode
+?shift f2 = GotoBuyMode
+?shift f3 = GotoBuildMode
+?shift f4 = GotoInGameStore
+?shift f5 = GotoOptionsMode
+
+control z = Undo
+control y = Redo
+escape = ToolCancel
+delete = ProductDelete
+backspace = ProductDelete
+g = GridToggle
+l = DayNightToggle
+t = TopDownCamToggle
+v = ToggleVideoRecorder
+c = TakeSnapshot
+
+// Better Build placement controls.
+// 6/7 = object scaling.
+// 8/9 intentionally live here (and in script_ingame), NOT in userToolActiveHandTool.
+6 = BetterBuildScaleDown
+7 = BetterBuildScaleUp
+8 = BetterBuildMoveDown
+9 = BetterBuildMoveUp
+shift 8 = BetterBuildMoveDownFine
+shift 9 = BetterBuildMoveUpFine
+alt 8 = BetterBuildMoveDownFree
+alt 9 = BetterBuildMoveUpFree
+alt shift 8 = BetterBuildMoveDownFreeFine
+alt shift 9 = BetterBuildMoveUpFreeFine
+
+ControlKey = StateCtrl
+ShiftKey = StateShift
+AltKey = StateAlt
+Control ShiftKey = StateCtrlShift
+Shift ControlKey = StateCtrlShift
+Alt ControlKey = StateCtrlAlt
+Control AltKey = StateCtrlAlt
+Alt ShiftKey = StateAltShift
+Shift AltKey = StateAltShift
+Alt Control ShiftKey = StateCtrlAltShift
+Alt Shift ControlKey = StateCtrlAltShift
+Control Shift AltKey = StateCtrlAltShift

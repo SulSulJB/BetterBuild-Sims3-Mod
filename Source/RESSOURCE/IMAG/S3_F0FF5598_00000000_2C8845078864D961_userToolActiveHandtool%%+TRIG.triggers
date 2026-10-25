@@ -1,0 +1,46 @@
+// Trigger configuration for active user tools
+#define RotateObjectClockwise		0x02552003
+#define RotateObjectAnticlockwise	0x02552004
+#define ShiftToNextSlot			    0x02552005
+#define MoveUp                      0x02552006
+#define MoveDown                    0x02552007
+
+// These match the values in ueterTools.triggers
+#define ToolCancel                  0x02551003
+#define ProductDelete               0x02551004
+
+#define  StateCtrl          0x02551010
+#define  StateShift         0x02551011
+#define  StateAlt           0x02551012
+#define  StateCtrlShift     0x02551013
+#define  StateCtrlAlt       0x02551014
+#define  StateCtrlAltShift  0x02551015
+#define  StateAltShift      0x02551016
+
+?shift .	= RotateObjectClockwise
+?shift ,	= RotateObjectAnticlockwise
+?shift m	= ShiftToNextSlot
+?shift ;	= MoveUp
+?shift '    = MoveDown
+
+// Better Build: preserve normal Buy/Build cancel/delete while an object is held.
+// 6/7/8/9 intentionally remain in userTools + script_ingame.
+escape = ToolCancel
+delete = ProductDelete
+backspace = ProductDelete
+
+
+
+// These match the values in ueterTools.triggers
+ControlKey							=  StateCtrl
+ShiftKey							=  StateShift
+AltKey								=  StateAlt
+Control ShiftKey                    =  StateCtrlShift
+Shift ControlKey                    =  StateCtrlShift
+Alt ControlKey				        =  StateCtrlAlt
+Control AltKey                      =  StateCtrlAlt
+Alt ShiftKey                        =  StateAltShift
+Shift AltKey                        =  StateAltShift
+Alt Control ShiftKey                =  StateCtrlAltShift
+Alt Shift ControlKey                =  StateCtrlAltShift
+Control Shift AltKey                =  StateCtrlAltShift

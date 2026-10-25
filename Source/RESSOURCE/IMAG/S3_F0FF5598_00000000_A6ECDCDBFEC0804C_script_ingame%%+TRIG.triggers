@@ -1,0 +1,143 @@
+#define AddOneHour                      0x049c75b3
+#define AddOneDay                       0x07295939
+#define CenterOnSelectedSim             0x04760f16
+#define CenterOnSelectedSimLotCurrent   0x047611d5
+#define DebugLotsDumpAll                0x04a475a3
+#define DebugLotsLevelDownUp            0x044995e5
+#define DebugSelectNextSim              0x04d2a8b7
+#define DebugSelectPreviousSim          0x04d2a8b8
+#define DebugObjectToString             0x047ca385
+#define ExitWorld                       0xdf15d529
+#define FastSpeed                       0x042da942
+#define GotoLiveMode                    0x02440001
+#define GotoBuildMode                   0x02440002
+#define GotoBuyMode                     0x02440003
+#define GotoOptionsMode                 0x02440004
+#define MediumSpeed                     0x042da93a
+#define NextWallMode                    0x02430001
+#define OpenLotFloorDown                0x0449af24
+#define OpenLotFloorUp                  0x0449af12
+#define PauseSimulator                  0x020c974a
+#define PauseStep                       0x323f2588
+#define PrevWallMode                    0x02430002
+#define Redo                            0x02551001
+#define SelectNextSim                   0x04760b3f
+#define SkipToEndOfInteractionSpeed     0x020c974e
+#define SlowMotion                      0x04a9fb76
+#define ToggleFreeWill                  0x042c8848
+#define ToggleMotives                   0x04fe3644
+#define ToggleUI                        0x3bbd997d
+#define ToggleVideoRecorder             0x06675434
+#define TakeSnapshot                    0xc0290138
+#define TakePhotograph                  0x1e0f16cc
+#define UltraSpeed                      0x042da94c
+#define Undo                            0x02551000
+#define CameraToggleMapView             0x02541009
+#define AutonomyDebugWindow             0x933178f6
+#define AnimationDebugWindow            0x052aed99
+#define SocializingDebugWindow          0xba6978b0
+#define SituationDebugWindow            0xba6978b1
+#define GpeDebugWindow                  0xc19841c4
+#define ToggleUserMoveObjectsOverride   0xbe7dc439
+#define ShowInventory                   0xfeed4765
+#define DebugShowFamilyInventory        0x13f2a614
+#define ReloadWorld                     0x44c094be
+
+#define GenericEscape                   0x0a2400d1
+#define GenericDelete                   0x0a2400d2
+
+#define InteractionTool                 0x0859a3ce
+
+// Better Build custom actions
+#define BetterBuildMoveUp               0x0BBD1001
+#define BetterBuildMoveDown             0x0BBD1002
+#define BetterBuildMoveUpFine           0x0BBD1003
+#define BetterBuildMoveDownFine         0x0BBD1004
+#define BetterBuildMoveUpFree           0x0BBD1005
+#define BetterBuildMoveDownFree         0x0BBD1006
+#define BetterBuildMoveUpFreeFine       0x0BBD1007
+#define BetterBuildMoveDownFreeFine     0x0BBD1008
+#define BetterBuildScaleDown            0x0BBD1010
+#define BetterBuildScaleUp              0x0BBD1011
+
+// Debug - Not available in release
+alt a = ToggleFreeWill
+alt shift a = ToggleMotives
+alt r = DebugLotsLevelDownUp
+alt d = DebugObjectToString
+alt l = DebugLotsDumpAll
+alt n = DebugSelectNextSim
+alt shift n = DebugSelectPreviousSim
+control = = AddOneHour
+control shift = = AddOneDay
+control shift t = SlowMotion
+control shift l = ReloadWorld
+control shift n = AnimationDebugWindow
+control shift z = AutonomyDebugWindow
+control shift x = SocializingDebugWindow
+control shift v = SituationDebugWindow
+alt j = GpeDebugWindow
+alt m = ToggleUserMoveObjectsOverride
+alt i = DebugShowFamilyInventory
+
+// HUD Control
+?shift f1 = GotoLiveMode
+?shift f2 = GotoBuyMode
+?shift f3 = GotoBuildMode
+?shift f5 = GotoOptionsMode
+
+f10 = ToggleUI
+v = ToggleVideoRecorder
+c = TakeSnapshot
+shift c = TakePhotograph
+m = CameraToggleMapView
+escape = GenericEscape
+delete = GenericDelete
+
+// UCP Control
+enter = CenterOnSelectedSim
+shift enter = CenterOnSelectedSimLotCurrent
+pageup = OpenLotFloorUp
+pagedown = OpenLotFloorDown
+home = NextWallMode
+end = PrevWallMode
+space = SelectNextSim
+n = SelectNextSim
+
+// Speed
+p = PauseSimulator
+pause = PauseSimulator
+` = PauseSimulator
+0 = PauseSimulator
+numpad0 = PauseSimulator
+1 = MediumSpeed
+numpad1 = MediumSpeed
+2 = FastSpeed
+numpad2 = FastSpeed
+3 = UltraSpeed
+numpad3 = UltraSpeed
+4 = SkipToEndOfInteractionSpeed
+numpad4 = SkipToEndOfInteractionSpeed
+
+// Undo/Redo
+control z = Undo
+control y = Redo
+
+// others
+i = ShowInventory
+alt q = ExitWorld
+
+// Better Build placement controls.
+// 6/7 = object scaling.
+// 8/9 intentionally live here (and in userTools), NOT in userToolActiveHandTool.
+// Needed while SceneMgrWindow is forwarding to script_ingame, notably during direct Buy catalog drag.
+6 = BetterBuildScaleDown
+7 = BetterBuildScaleUp
+8 = BetterBuildMoveDown
+9 = BetterBuildMoveUp
+shift 8 = BetterBuildMoveDownFine
+shift 9 = BetterBuildMoveUpFine
+alt 8 = BetterBuildMoveDownFree
+alt 9 = BetterBuildMoveUpFree
+alt shift 8 = BetterBuildMoveDownFreeFine
+alt shift 9 = BetterBuildMoveUpFreeFine
