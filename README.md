@@ -419,4 +419,4 @@ Thank you for supporting Better Build and my vision for The Sims 3!
 
 **Happy Building! 💗**
 
-— Jojobou / Sul
+— Jojobou / SulSulJB
